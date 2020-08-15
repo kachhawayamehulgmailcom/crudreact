@@ -1,0 +1,178 @@
+.tableCell {
+  min-width: 182px;
+  .MuiButton-root {
+    text-transform: none;
+  }
+}
+.cursorpointer {
+  cursor: pointer;
+}
+.detailedListViewContainer {
+  padding: 0px !important;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  .listItemText {
+    .MuiListItemText-primary {
+      font-weight: bold !important;
+    }
+  }
+}
+.fixedColumn-right {
+  right: 0px;
+  white-space: nowrap;
+  z-index: 300;
+  position: -webkit-sticky;
+  position: sticky;
+  background-clip: padding-box;
+  padding-left: 24px;
+
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+// .fixedColumn {
+//   left: 0px;
+//   white-space: nowrap;
+//   z-index: 300;
+//   position: sticky;
+//   background-clip: padding-box;
+//   padding-left: 24px;
+// }
+.fixedColumnBackgroundTh {
+  background-color: #fafafa;
+}
+.fixedColumnBackgroundTd {
+  background-color: #fff;
+}
+
+.getHoverEffectContainer {
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  p {
+    font-size: 1.6em;
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+    padding: 1em;
+    color: #002240;
+    margin-top: 0;
+  }
+
+  /* .getHoverEffect */
+
+  .getHoverEffect {
+    display: inline-block;
+    position: relative;
+    // margin: 1em;
+    // padding: 0.67em;
+    // border: 2px solid #FFF;
+    // overflow: hidden;
+    // text-decoration: none;
+    // font-size: 2em;
+    // outline: none;
+    // color: #FFF;
+    // background: transparent;
+    // font-family: 'raleway', sans-serif;
+  }
+
+  .getHoverEffect span {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  .getHoverEffect:before,
+  .getHoverEffect:after {
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: 0.4s, opacity 0.6s;
+    -moz-transition: 0.4s, opacity 0.6s;
+    -o-transition: 0.4s, opacity 0.6s;
+    transition: 0.4s, opacity 0.6s;
+  }
+
+  /* :before */
+
+  .getHoverEffect:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%, 0);
+    -moz-transform: translate(-150%, 0);
+    -ms-transform: translate(-150%, 0);
+    -o-transform: translate(-150%, 0);
+    transform: translate(-150%, 0);
+  }
+
+  /* :after */
+
+  .getHoverEffect:after {
+    content: attr(data-active);
+    -webkit-transform: translate(150%, 0);
+    -moz-transform: translate(150%, 0);
+    -ms-transform: translate(150%, 0);
+    -o-transform: translate(150%, 0);
+    transform: translate(150%, 0);
+  }
+
+  /* Span on :hover and :active */
+
+  .getHoverEffect:hover span,
+  .getHoverEffect:active span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+
+  /*  
+      We show :before pseudo-element on :hover 
+      and :after pseudo-element on :active 
+  */
+
+  .getHoverEffect:hover:before,
+  .getHoverEffect:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  /* 
+    We hide :before pseudo-element on :active
+  */
+
+  .getHoverEffect:active:before {
+    -webkit-transform: translate(-150%, 0);
+    -moz-transform: translate(-150%, 0);
+    -ms-transform: translate(-150%, 0);
+    -o-transform: translate(-150%, 0);
+    transform: translate(-150%, 0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
